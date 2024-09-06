@@ -78,7 +78,21 @@ export default function Navbar() {
               </div>
               <NavLink to='login' onClick={logout} className="text-neutral-500">LogOut</NavLink>
             </>
-          ) : null}
+          ) : ( 
+         <>
+              <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal border rounded-lg 
+                md:space-x-0 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                <li>
+                  <NavLink to='register' className="block py-2 px-2 text-neutral-500 rounded md:bg-transparent visited:text-black"
+                    aria-current="page">Register</NavLink>
+                </li>
+                <li>
+                  <NavLink to='login' className="block py-2 px-2 text-neutral-500 rounded md:bg-transparent visited:text-black"
+                    aria-current="page">Login</NavLink>
+                </li>
+              </ul>
+            </>
+      )}
         </div>
         <div className={`items-center justify-between hidden md:flex md:w-auto md:order-1 ${isNavOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
           {token ? (

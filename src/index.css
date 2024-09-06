@@ -1,0 +1,88 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  --main-color:#4fa74f;
+  --second-color: #22db14;
+  /* color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  
+}
+.container-max{
+  max-width: 1320px;
+  margin: 60px auto;
+
+}
+
+
+.nav-icon{
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.product{
+ transition:  box-shadow 0.3s linear;
+ box-shadow: 0 0 1 rgba(69, 154, 26, 1); 
+ cursor: pointer;
+
+}
+.product .btn{
+  transition:  transform 0.5s ,opacity 1s ;
+  transform: translateY(300%);
+  opacity: 0;
+  background-color: var(--main-color);
+
+}
+.product:hover .btn{
+  opacity: 1;
+  transform: translateY(0%);
+}
+.product:hover{
+  box-shadow: 0 0 10px var(--main-color); 
+
+
+}
+.btn-2{
+  background-color: var(--second-color);
+  transition: all .5s;
+}
+.btn-2:hover{
+  background-color: #1FC512;
+}
+.slick-dots li button::before {
+  background-color: #c2c1c1;
+  height: 8px !important;
+  width: 14px !important;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 3px;
+  content: '';  /* Ensure content is still set */
+  display: inline-block;
+
+ }
+
+
+
+.green-color{
+ color: #22db14;
+
+}
+.green-border{
+  border-color:  #22db14;
+}
+.cart-color{
+  background-color: var(--main-color);
+}
+.brands{
+  color: var(--main-color);
+  font-size: 40px;
+}
